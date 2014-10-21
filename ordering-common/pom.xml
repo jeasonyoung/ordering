@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.ipower</groupId>
+    <artifactId>ordering</artifactId>
+    <version>1.0.0.0</version>
+  </parent>
+  <artifactId>ordering-common</artifactId>
+  <packaging>jar</packaging>
+  <name>通用jar包</name>
+  
+  <dependencies>
+      <!-- spring -->
+       <dependency>
+           <groupId>org.springframework</groupId>
+	        <artifactId>spring-core</artifactId>
+       </dependency>
+       <!-- freemarker -->
+       <dependency>
+           	<groupId>org.freemarker</groupId>
+	        <artifactId>freemarker</artifactId>
+       </dependency>
+       <!-- logs -->
+       <dependency>
+           <groupId>org.slf4j</groupId>
+	       <artifactId>slf4j-api</artifactId>
+       </dependency>
+       <dependency>
+           <groupId>log4j</groupId>
+	       <artifactId>log4j</artifactId>
+       </dependency>
+       <!-- json -->
+       <dependency>
+           <groupId>org.codehaus.jackson</groupId>
+	        <artifactId>jackson-core-lgpl</artifactId>
+       </dependency>
+       <dependency>
+           <groupId>org.codehaus.jackson</groupId>
+	       <artifactId>jackson-core-asl</artifactId>
+       </dependency>
+       <dependency>
+           <groupId>org.codehaus.jackson</groupId>
+	       <artifactId>jackson-mapper-lgpl</artifactId>
+       </dependency>
+       <dependency>
+           <groupId>org.codehaus.jackson</groupId>
+	        <artifactId>jackson-mapper-asl</artifactId>
+       </dependency>
+       <!-- test -->
+       <dependency>
+           <groupId>junit</groupId>
+	       <artifactId>junit</artifactId>
+	       <scope>test</scope>
+       </dependency>
+  </dependencies>
+  
+  <build>
+      <finalName>ordering-common</finalName>
+      <plugins>
+          <!-- 编译插件 -->
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <version>3.1</version>
+              <configuration>
+                  <source>${java.version}</source>
+				  <target>${java.version}</target>
+			      <encoding>${encoding}</encoding>
+              </configuration>
+          </plugin>
+          <!-- 源码插件 -->
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-resources-plugin</artifactId>
+              <version>2.6</version>
+              <configuration>
+                  	<encoding>${encoding}</encoding>
+              </configuration>
+          </plugin>
+          <!-- javadoc插件 -->
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-javadoc-plugin</artifactId>
+			  <version>2.9.1</version>
+			  <configuration>
+					<encoding>${encoding}</encoding>
+			   </configuration>
+          </plugin>
+      </plugins>
+  </build>
+</project>
