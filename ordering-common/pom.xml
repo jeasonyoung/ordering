@@ -16,6 +16,10 @@
            <groupId>org.springframework</groupId>
 	        <artifactId>spring-core</artifactId>
        </dependency>
+       <dependency>
+       		<groupId>org.springframework</groupId>
+	        <artifactId>spring-webmvc</artifactId>
+       </dependency>
        <!-- freemarker -->
        <dependency>
            	<groupId>org.freemarker</groupId>
@@ -47,6 +51,11 @@
            <groupId>org.codehaus.jackson</groupId>
 	        <artifactId>jackson-mapper-asl</artifactId>
        </dependency>
+       <!-- xml -->
+	   <dependency>
+	       <groupId>com.thoughtworks.xstream</groupId>
+	       <artifactId>xstream</artifactId>
+	   </dependency>
        <!-- test -->
        <dependency>
            <groupId>junit</groupId>
